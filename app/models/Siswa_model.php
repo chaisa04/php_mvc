@@ -27,13 +27,15 @@
         {
           $query = "INSERT INTO siswa
                       VALUES
-                  ('', :nama, :nis, :jenis_kelamin, :jurusan)";
+                  ('', :nama, :nis, :email, :jurusan, :no_telp, :alamat)";
           
           $this->db->query($query);
           $this->db->bind('nama', $data['nama']);
           $this->db->bind('nis', $data['nis']);
-          $this->db->bind('jenis_kelamin', $data['jenis_kelamin']);
+          $this->db->bind('email', $data['email']);
           $this->db->bind('jurusan', $data['jurusan']);
+          $this->db->bind('alamat', $data['alamat']);
+          $this->db->bind('no_telp', $data['no_telp']);
 
           $this->db->execute();
 
@@ -53,18 +55,23 @@
 
         public function ubahDataSiswa($data)
         {
+
           $query = "UPDATE siswa SET
                        nama = :nama,
                        nis = :nis,
-                       jenis_kelamin = :jenis_kelamin,
-                       jurusan = :jurusan
+                       email = :email,
+                       jurusan = :jurusan,
+                       alamat = :alamat,
+                       no_telp = :no_telp
                       WHERE id = :id";
           
           $this->db->query($query);
           $this->db->bind('nama', $data['nama']);
           $this->db->bind('nis', $data['nis']);
-          $this->db->bind('jenis_kelamin', $data['jenis_kelamin']);
+          $this->db->bind('email', $data['email']);
           $this->db->bind('jurusan', $data['jurusan']);
+          $this->db->bind('alamat', $data['alamat']);
+          $this->db->bind('no_telp', $data['no_telp']);
           $this->db->bind('id', $data['id']);
 
           $this->db->execute();

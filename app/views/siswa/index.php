@@ -63,22 +63,20 @@
       <input type="hidden" name="id" id="id">
 
         <div class="mb-3">
-          <label for="nama" class="form-label">Nama</label>
+          <label for="nama" class="form-label">Nama :</label>
           <input type="text" class="form-control" id="nama" name="nama">
         </div>
 
         <div class="mb-3">
-          <label for="nis" class="form-label">Nis</label>
+          <label for="nis" class="form-label">Nis :</label>
           <input type="number" class="form-control" id="nis" name="nis">
         </div>
 
         <div class="mb-3">
-          <label for="jenis_kelamin" class="form-label">Pilih Jenis Kelamin :</label>
-          <select id="jenis_kelamin" class="form-select" name="jenis_kelamin">
-            <option value="Laki Laki">Laki Laki</option>
-            <option value="Perempuan">Perempuan</option>
-          </select>
+          <label for="email" class="form-label">Email :</label>
+          <input type="text" class="form-control" id="email" name="email">
         </div>
+
 
         <div class="mb-3">
           <label for="jurusan" class="form-label">Pilih Jurusan :</label>
@@ -90,6 +88,15 @@
           </select>
         </div>
 
+        <div class="mb-3">
+          <label for="no_telp" class="form-label">No telp :</label>
+          <input type="number" class="form-control" id="no_telp" name="no_telp">
+        </div>
+        
+        <div class="mb-3">
+          <label for="alamat" class="form-label">Alamat :</label>
+          <input type="text" class="form-control" id="alamat" name="alamat">
+        </div>
 
 
       </div>

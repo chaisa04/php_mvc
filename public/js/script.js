@@ -2,7 +2,7 @@
 $('.tombolTambahData').on('click', function(){
 
     $('#formModalLabel').html('Tambah Data Siswa');
-    $('.modal-footer button[type=submit]').html('Tamabah Data');
+    $('.modal-footer button[type=submit]').html('Tambah Data');
     
 });
 
@@ -22,8 +22,11 @@ $('.tampilModalUbah').on('click', function(){
             success: function(data){
                 $('#nama').val(data.nama);
                 $('#nis').val(data.nis);
-                $('#jenis_kelamin').val(data.jenis_kelamin);
+                $('#email').val(data.email);
                 $('#jurusan').val(data.jurusan);
+                $('#alamat').val(data.alamat);
+                $('#no_telp').val(data.no_telp);
+                
                 $('#id').val(data.id);
             }
         })
