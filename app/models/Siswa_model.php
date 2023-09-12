@@ -27,7 +27,7 @@
         {
           $query = "INSERT INTO siswa
                       VALUES
-                  ('', :nama, :nis, :email, :jurusan, :no_telp, :alamat)";
+                  ('', :nama, :nis, :email, :jurusan, :no_telp, :alamat, :mata_pelajaran_id, :mata_pelajaran_id, :mata_pelajaran_id)";
           
           $this->db->query($query);
           $this->db->bind('nama', $data['nama']);
@@ -36,6 +36,9 @@
           $this->db->bind('jurusan', $data['jurusan']);
           $this->db->bind('alamat', $data['alamat']);
           $this->db->bind('no_telp', $data['no_telp']);
+          $this->db->bind('mata_pelajaran_id', $data['mata_pelajaran_id']);
+          $this->db->bind('mata_pelajaran_id', $data['mata_pelajaran_id']);
+          $this->db->bind('mata_pelajaran_id', $data['mata_pelajaran_id']);
 
           $this->db->execute();
 
@@ -62,7 +65,7 @@
                        email = :email,
                        jurusan = :jurusan,
                        alamat = :alamat,
-                       no_telp = :no_telp
+                       no_telp = :no_telp,
                       WHERE id = :id";
           
           $this->db->query($query);
@@ -81,7 +84,7 @@
         public function cariDataSiswa()
         {
           $keyword = $_POST['keyword'];
-          $query = "SELECT * FROM siswa WHERE nama LIKE :keyword";
+          $query = "SELECT * FROM siswa WHERE nama LIKE :keyword OR jurusan LIKE :keyword";
           $this->db->query($query);
           $this->db->bind('keyword', "%$keyword%");
           return $this->db->resultSet();

@@ -7,7 +7,8 @@
     <p class="card-text"><?= $data['sw']['jurusan'];?></p>
     <p class="card-text"><?= $data['sw']['alamat'];?></p>
     <p class="card-text"><?= $data['sw']['no_telp'];?></p>
-    <a href="<?= BASEURL;?>/siswa" class="card-link">Kembali</a>
+
+    <a href="<?= BASEURL;?>/siswa/pilih_mapel" class="card-link">Kembali</a>
   </div>
 </div>
 </div>
